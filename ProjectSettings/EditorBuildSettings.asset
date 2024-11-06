@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trail.unity
     guid: 6ef8c794ec82e5a4ab937d90025e5d02
+  - enabled: 1
+    path: Assets/Scenes/Victory2.unity
+    guid: f47d29aa14463c64997cddbc74c242aa
   m_configObjects: {}

@@ -28,7 +28,7 @@ public class EnemyMove : MonoBehaviour
         
         toPos = toPos.normalized;
 
-        GetComponent<Rigidbody2D>().velocity = toPos * 3;
+        GetComponent<Rigidbody2D>().velocity = toPos * 6;
 
         Destroy(gameObject, 7f);
     }
