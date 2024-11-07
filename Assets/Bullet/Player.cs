@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
 
-        GetComponent<Rigidbody2D>().velocity = new Vector3(horizontal * playerMoveSpeed, vertical * playerMoveSpeed, 0f);
+        GetComponent<Rigidbody2D>().velocity = new Vector3(horizontal, vertical, 0f).normalized * playerMoveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -35,7 +35,7 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator Miracle()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         int index = Random.Range(0, 2);
         if(index == 0)
         {

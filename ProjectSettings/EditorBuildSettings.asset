@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory2.unity
     guid: f47d29aa14463c64997cddbc74c242aa
+  - enabled: 1
+    path: Assets/Scenes/Typing.unity
+    guid: 8a309c62c2b305b438ef4ac59a033759
+  - enabled: 1
+    path: Assets/Scenes/Victory3.unity
+    guid: b7589f5df11a0b5448f9460d50fcf2f0
   m_configObjects: {}
