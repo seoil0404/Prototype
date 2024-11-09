@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI time;
     public TextMeshProUGUI leftObject;
     public int leftNumber;
+
     void Start()
     {
 
@@ -37,14 +38,70 @@ public class GameController : MonoBehaviour
         }
         if (states[0] == 4)
         {
-            int Unknownrandom = Random.Range(0, 4);
+            int Unknownrandom = BadRandom();
             monsters[0].GetComponent<SpriteRenderer>().sprite = sprites[Unknownrandom];
             states[0] = Unknownrandom;
         }
-        
-        int random = Random.Range(2, 5);
+
+        int random = JustRandom();
+
         monsters[6].GetComponent<SpriteRenderer>().sprite = sprites[random];
         states[6] = random;
+    }
+
+    public int JustRandom()
+    {
+        float rand = Random.Range(0, 10);
+
+        if(rand < 2)
+        {
+            return 4;
+        }
+        else
+        {
+            int boolRand = Random.Range(0, 2);
+
+            if (boolRand < 1)
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
+        }
+    }
+
+    public int BadRandom()
+    {
+        int rand = Random.Range(0, 3);
+
+        if(rand == 0)
+        {
+            rand = Random.Range(0, 2);
+
+            if(rand == 0)
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
+        }
+        else
+        {
+            rand = Random.Range(0, 2);
+
+            if(rand == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
     }
 
     public void Clicked(int dir)
