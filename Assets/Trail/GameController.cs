@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
     {
         float rand = Random.Range(0, 10);
 
-        if(rand < 2)
+        if(rand < 3)
         {
             return 4;
         }
