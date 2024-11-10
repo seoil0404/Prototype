@@ -28,7 +28,7 @@ public class SummonMonster : MonoBehaviour
         current.transform.position = new Vector3(Mathf.Cos(angle) * spawnRadius, Mathf.Sin(angle) * spawnRadius, -5);
 
         yield return new WaitForSeconds(1/spawnRate);
-        spawnRate += 0.5f;
+        spawnRate += 0.1f;
 
         StartCoroutine(SpawnMonster());
     }
