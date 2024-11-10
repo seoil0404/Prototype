@@ -27,8 +27,8 @@ public class SummonMonster : MonoBehaviour
         GameObject current = Instantiate(monsterPrefab);
         current.transform.position = new Vector3(Mathf.Cos(angle) * spawnRadius, Mathf.Sin(angle) * spawnRadius, -5);
 
-        yield return new WaitForSeconds(spawnRate);
-        spawnRate -= 0.005f;
+        yield return new WaitForSeconds(1/spawnRate);
+        spawnRate += 0.5f;
 
         StartCoroutine(SpawnMonster());
     }
