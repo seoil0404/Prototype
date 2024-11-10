@@ -1632,6 +1632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   face: {fileID: 1848474318}
+  TMP_text: {fileID: 134371892}
 --- !u!1 &1966058286
 GameObject:
   m_ObjectHideFlags: 0
