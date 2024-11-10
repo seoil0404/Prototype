@@ -30,6 +30,10 @@ public class Player : MonoBehaviour
         switch (enemy.enemyType)
         {
             case EnemyMove.EnemyType.level0:
+                if (health < 3)
+                {
+                    health += 1;
+                }
                 break;
             case EnemyMove.EnemyType.level1:
                 health -= 1;

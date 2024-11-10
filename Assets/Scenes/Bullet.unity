@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4.5
-  spawnRate: 0.6
+  spawnRate: 0.5
   player: {fileID: 180604567}
   monsterPrefab: {fileID: 1595181384536518922, guid: e51bb4b7d20872348b4aff4b631581c0, type: 3}
 --- !u!1 &1429945784

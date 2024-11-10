@@ -16,8 +16,19 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        switch (LevelController.level)
+        {
+            case LevelController.Level.Easy:
+                leftNumber = 20; break;
+            case LevelController.Level.Normal:
+                leftNumber = 40; break;
+            case LevelController.Level.Hard:
+                leftNumber = 50; break;
+        }
 
-        for(int index = 0 ; index < monsters.Length; index++)
+        leftObject.text = leftNumber.ToString();
+
+        for (int index = 0 ; index < monsters.Length; index++)
         {
             states[index] = 0;
         }

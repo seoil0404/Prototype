@@ -11,6 +11,12 @@ public class SummonMonster : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartSpawn());
+    }
+
+    IEnumerator StartSpawn()
+    {
+        yield return new WaitForSeconds(spawnRate*2);
         StartCoroutine(SpawnMonster());
     }
 
@@ -22,7 +28,8 @@ public class SummonMonster : MonoBehaviour
         current.transform.position = new Vector3(Mathf.Cos(angle) * spawnRadius, Mathf.Sin(angle) * spawnRadius, -5);
 
         yield return new WaitForSeconds(spawnRate);
-        
+        spawnRate -= 0.005f;
+
         StartCoroutine(SpawnMonster());
     }
 }

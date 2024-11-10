@@ -15,7 +15,7 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
-        int index = Random.Range(0, sprite.Length);
+        int index = Random.Range(1, sprite.Length);
         enemyType = (EnemyType)index;
         GetComponent<SpriteRenderer>().sprite = sprite[index];
         
@@ -35,7 +35,7 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator Miracle()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         int index = Random.Range(0, 2);
         if(index == 0)
         {

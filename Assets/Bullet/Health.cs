@@ -11,23 +11,29 @@ public class Health : MonoBehaviour
         switch (health)
         {
             case 0:
-                Destroy(healthObject[0]);
-                Destroy(healthObject[1]);
-                Destroy(healthObject[2]);
+                healthObject[0].SetActive(false);
+                healthObject[1].SetActive(false);
+                healthObject[2].SetActive(false);
                 break;
             case 1:
-                Destroy(healthObject[1]);
-                Destroy(healthObject[2]);
+                healthObject[0].SetActive(false);
+                healthObject[1].SetActive(false);
+                healthObject[2].SetActive(true);
                 break;
             case 2:
-                Destroy(healthObject[2]);
+                healthObject[0].SetActive(false);
+                healthObject[1].SetActive(true);
+                healthObject[2].SetActive(true);
                 break;
             case 3:
+                healthObject[0].SetActive(true);
+                healthObject[1].SetActive(true);
+                healthObject[2].SetActive(true);
                 break;
             default:
-                Destroy(healthObject[0]);
-                Destroy(healthObject[1]);
-                Destroy(healthObject[2]);
+                healthObject[0].SetActive(false);
+                healthObject[1].SetActive(false);
+                healthObject[2].SetActive(false);
                 break;
         }
     }
